@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+    
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -49,25 +50,21 @@
 
       <div class="profile">
         <img src="<c:url value="/resources/assets/img/HGULogo.jpg"/>" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light" style="text-align: center;"><a href="index.html">어서오세요!<br>한동의 누군가님!</a></h1>
+        <h1 class="text-light" style="text-align: center;"><a href="index.html">새로운 유저는!<br>언제나 환영!</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="http://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>    
           <a href="http://chruch.handong.edu" target="_blank" class="bible"><i class="bx bx-bible"></i></a>
         </div>
       </div>
       <br><br>
-      <form id="" name="" method="post" action="loginOK" class="form_login">
-		<fieldset align="center">
-       <p><input type="text" name="id" placeholder="아이디 입력해주세요"></p>
-       <p><input type="password" name="password" placeholder="비밀번호를 알려줘"></p>
+      
+        <fieldset alien="center">
+          <h1>Sometime.hgu</h1>
+          <p>저는  <span class="typed" data-typed-items=",21학번 새내기,20학번 (미개봉중고),이제는 실전 헌내기,맘스 좀 먹은 고학번,한동의 교수님, 귀여운 김나비 ㅇㅅㅇ, 나라지키고 있는 구닌, 아무것도 몰라요 군복학생"></span></p>
+       </fieldset>
        
-       <p>
-       	<input type="submit" value="로그인">
-       	<button type="button" onclick="location.href='signin'">회원가입</button>
-       </p>
-       
-       	</fieldset>
-      </form>       
+
+ 
        
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
@@ -77,8 +74,58 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>Sometime.hgu</h1>
-      <p>저는  <span class="typed" data-typed-items=",21학번 새내기,20학번 (미개봉중고),이제는 실전 헌내기,맘스 좀 먹은 고학번,한동의 교수님, 귀여운 김나비 ㅇㅅㅇ, 나라지키고 있는 구닌, 아무것도 몰라요 군복학생"></span></p>
+      <div class="signinBack" style="text-align: center;">
+      <form name="" action="signinOK" method="POST">
+        <table>
+          <tr>
+            <td>아이디</td>
+            <td><input type="text" name="id" id="id" /></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="password" id="pass" /></td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="text" name="user_pw2" /></td>
+        </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="username" id="username" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>닉네임</td>
+                <td><input type="text" name="nickname" id="nickname" /></td>
+            </tr>
+            <tr>
+              <td>이메일</td>
+              <td><input type="text" name="email" id="email" /></td>
+          	</tr>
+            <tr>
+                <td>학교</td>
+                <td><select name="school" id="school" style="width: 100%;">
+                        <option value="한동대학교">한동대학교</option>
+                        <option value="한동대학원">한동대학원</option>
+                        <option value="한동국제학교">한동국제학교</option>
+                    </select>
+                </td>
+                
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><input type="reset" name="reset" value="입력 초기화" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="회원가입" />
+                <button type="button" onclick="location.href='login''">취소</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+  </div>
     </div>
   </section><!-- End Hero -->
 
@@ -102,7 +149,7 @@
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-  <!-- Vendor JS Files -->
+ <!-- Vendor JS Files -->
   <script src="<c:url value="/resources/assets/vendor/jquery/jquery.min.js"/>"></script>
   <script src="<c:url value="/resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
   <script src="<c:url value="/resources/assets/vendor/jquery.easing/jquery.easing.min.js"/>"></script>
@@ -119,4 +166,5 @@
   <script src="<c:url value="/resources/assets/js/main.js"/>"></script>
 
 </body>
+
 </html>

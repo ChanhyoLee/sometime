@@ -7,7 +7,7 @@ public class UserVO {
 	private String pass;
 	private String username;
 	private String nickname;
-	private String eamil;
+	private String email;
 	private String school;
 	private Date regdate;
 	
@@ -41,11 +41,11 @@ public class UserVO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public String getEamil() {
-		return eamil;
+	public String getEmail() {
+		return email;
 	}
-	public void setEamil(String eamil) {
-		this.eamil = eamil;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getSchool() {
 		return school;

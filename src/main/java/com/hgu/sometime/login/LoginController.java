@@ -45,4 +45,34 @@ public class LoginController {
 		session.invalidate();
 		return "redirect:/login/login";
 	}
+	
+	@RequestMapping(value="/signin")
+	public String signin() {
+		return "signin";
+	}
+	
+	@RequestMapping(value="/signinOK", method=RequestMethod.POST)
+	public String signinCheck(HttpSession session, UserVO vo) {
+		String returnURL="";
+		int result = 0;
+		System.out.println(vo.getId() + vo.getPass() + vo.getSchool() +vo.getEmail() + vo.getNickname() +vo.getUsername());
+		UserVO signinvo = service.getID(vo);
+	
+		if(signinvo==null) {
+			result = service.insertUser(vo);
+			if(result != 0 ) {
+				System.out.println("회원가입 성공!!");
+				returnURL = "redirect:/login/login";
+			} else {
+				System.out.println("회원가입 실패!!");
+				returnURL = "redirect:/login/signin";
+			}
+		}
+		else {
+			System.out.println("회원가입 실패!!");
+			returnURL = "redirect:/login/signin";
+		}
+
+		return returnURL;
+	}
 }

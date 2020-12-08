@@ -18,7 +18,11 @@
 		select * from userInfo order by seq desc
 	</select>	
 	<select id="getUser" resultType="user">
-		select id, username from userInfo
+		select id, username, nickname, school, email from userInfo
 		where id=#{id} and pass=#{pass}
+	</select>
+	<select id="getID" resultType="user">
+		select id from userInfo
+		where id=#{id}
 	</select>	
 </mapper>

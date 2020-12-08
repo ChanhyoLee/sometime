@@ -104,13 +104,17 @@
 
 
 	<main id="main">
-		<!-- ======= Edit Post  View ======= -->
+
+		<!-- ======= Detaile View ======= -->
 		<section id="services" class="services">
 			<div class="container">
-				<form:form commandName="u" action="../editok" method="post">
+				<form:form commandName="u" action="editok" method="post">
 					<form:hidden path="seq" />
 					<div class="section-title">
-						<h2>게시글 수정</h2>
+						<h2>
+							제목 |
+							<form:label path="title" />
+						</h2>
 
 					</div>
 
@@ -120,8 +124,21 @@
 							<div class="icon">
 								<i class="icofont-penguin-linux"></i>
 							</div>
-							<h3 class="title">제목</h3>
-							<form:input path="title" style="width:90%; margin-left: 15px;" />
+							<h3 class="title">
+								<a href="">작성자</a>
+							</h3>
+							<form:label path="writer" style="width:90%; margin-left: 15px;" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-9 col-md-9 icon-box" data-aos="fade-up">
+							<div class="icon">
+								<i class="icofont-clock-time"></i>
+							</div>
+							<h3 class="title">
+								<a href="">작성 시간 </a>
+							</h3>
+							<form:label path="regdate" style="width:90%; margin-left: 15px;" />
 						</div>
 					</div>
 					<div class="row">
@@ -133,7 +150,7 @@
 							<h2 class="title">내용</h2>
 							<br>
 							<br>
-							<form:textarea path="content" cols="90" rows="10" name="content"></form:textarea>
+							<form:label path="content" style="width:90%; margin-left: 15px;" />
 						</div>
 					</div>
 					<div class="row">
@@ -141,7 +158,7 @@
 							data-aos-delay="100">
 							<div class="text-center">
 								<input type="button" value="Edit Post"
-									onclick="location.href='edit' " /> <input type="button"
+									onclick="location.href='../editform/${u.id}'" /> <input type="button"
 									value="Cancel" onclick="history.back()" />
 							</div>
 						</div>
@@ -151,8 +168,6 @@
 
 			</div>
 		</section>
-		<!— Edit Post View —>
-
 	</main>
 	<!-- End #main -->
 

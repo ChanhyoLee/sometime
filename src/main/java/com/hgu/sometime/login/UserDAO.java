@@ -17,6 +17,10 @@ public class UserDAO {
 		return sqlSession.selectOne("User.getUser", vo);
 	}
 	
+	public UserVO getID(UserVO vo) {
+		return sqlSession.selectOne("User.getID", vo);
+	}
+	
 	public List<UserVO> getUserList(){
 		return sqlSession.selectList("User.getUserList");
 	}

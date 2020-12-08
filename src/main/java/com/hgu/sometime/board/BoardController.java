@@ -19,6 +19,19 @@ public class BoardController {
 		return "list";
 	}
 	
+	@RequestMapping(value="/posts")
+	public String viewposts(Model model) {
+		model.addAttribute("list", boardService.getBoardList());
+		return "posts";
+	}
+	
+	@RequestMapping(value="/viewpost/{id}", method=RequestMethod.POST)
+	public String viewpost(@PathVariable("id") int id, Model model) {
+		BoardVO boardVO = boardService.getBoard(id);
+		model.addAttribute("u", boardVO);
+		return "viewpost";
+	}
+	
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public String addPost() {
 		return "addpostform";

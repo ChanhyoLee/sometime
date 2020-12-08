@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -49,26 +51,12 @@
 
       <div class="profile">
         <img src="<c:url value="/resources/assets/img/HGULogo.jpg"/>" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light" style="text-align: center;"><a href="index.html">어서오세요!<br>한동의 누군가님!</a></h1>
+        <h1 class="text-light" style="text-align: center;"><a href="list">${login.nickname}님, 안녕하세요.</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="http://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>    
+          <a href="http://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>
           <a href="http://chruch.handong.edu" target="_blank" class="bible"><i class="bx bx-bible"></i></a>
         </div>
       </div>
-      <br><br>
-      <form id="" name="" method="post" action="loginOK" class="form_login">
-		<fieldset align="center">
-       <p><input type="text" name="id" placeholder="아이디 입력해주세요"></p>
-       <p><input type="password" name="password" placeholder="비밀번호를 알려줘"></p>
-       
-       <p>
-       	<input type="submit" value="로그인">
-       	<button type="button" onclick="location.href='signin'">회원가입</button>
-       </p>
-       
-       	</fieldset>
-      </form>       
-       
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
     </div>
@@ -82,7 +70,56 @@
     </div>
   </section><!-- End Hero -->
 
-  
+  <main id="main">
+
+   
+    <!-- ======= Resume Section | 자유게시판으로 만들것이다 ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>자유게시판</h2>
+          <p>이곳은 여러분들의 의식의 흐름을 보여줍니다</p>
+        </div>
+
+        
+          <div  class="col-lg-9" data-aos="fade-up">
+            <h3 class="resume-title">목록</h3>
+            <div class="resume-item pb-0"> <!-- 가로선 데코하는 애 -->
+                        
+				<table id="list" border="1" width="90%">
+				
+				<tr>
+					<th>순번</th>
+					<th>범주</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>작성일</th>
+					<%-- <th>Edit</th>
+					<th>Delete</th>--%>
+				</tr>
+				
+				<c:forEach items="${list}" var="u">
+					<tr>
+						<td>${u.seq}</td>
+						<td>${u.category}</td>
+						<td><a href="viewpost/${u.seq}">${u.title}</a></td>
+						<td>${u.writer}</td>
+						<td>${u.regdate}</td>
+						<%-- <td><a href="editform/${u.seq}">Edit</a></td>
+						<td><a href="deleteok/${u.seq}">Delete</a></td>--%>
+					</tr>
+				</c:forEach>
+				</table>
+            
+            </div>
+          </div>
+        
+
+      </div>
+    </section><!-- End Resume Section -->
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -119,4 +156,5 @@
   <script src="<c:url value="/resources/assets/js/main.js"/>"></script>
 
 </body>
+
 </html>

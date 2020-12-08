@@ -17,6 +17,9 @@ public class UserServiceImpl {
 	public List<UserVO> getUserList() {
 		return userDAO.getUserList();
 	}
+	public UserVO getID(UserVO vo) {
+		return userDAO.getID(vo);
+	}
 	
 	public int insertUser(UserVO vo) {
 		return userDAO.insertUser(vo);
