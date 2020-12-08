@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+	<insert id="insertUser">
+		insert into userInfo (id, username, pass, nickname, email, school)
+		values
+		(#{id}, #{username}, #{pass}, #{nickname}, #{email}, #{school})
+	</insert>
+	<update id="updateUser">
+		update userInfo
+		set pass=#{pass}, nickname=#{nickname}, email=#{email}, school=#{school}
+		where seq=#{seq}		
+	</update>
+	<delete id="deleteUser">
+		delete from userInfo where seq=#{seq}
+	</delete>
+	<select id="getUserList" resultType="user">
+		select * from userInfo order by seq desc
+	</select>	
+	<select id="getUser" resultType="user">
+		select id, username from userInfo
+		where id=#{id} and pass=#{pass}
+	</select>	
+</mapper>
