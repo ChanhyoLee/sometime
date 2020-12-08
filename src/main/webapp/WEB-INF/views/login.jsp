@@ -50,14 +50,14 @@
       <div class="profile">
         <img src="<c:url value="/resources/assets/img/HGULogo.jpg"/>" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light" style="text-align: center;"><a href="index.html">어서오세요!<br>한동의 누군가님!</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="http://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>    
-          <a href="http://chruch.handong.edu" target="_blank" class="bible"><i class="bx bx-bible"></i></a>
-        </div>
+		<div class="social-links mt-3 text-center">
+			<a href="https://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>
+			<a href="https://church.handong.edu:9003/" target="_blank" class="bible"><i class="bx bx-bible"></i></a>
+		</div>
       </div>
       <br><br>
       <form id="" name="" method="post" action="loginOK" class="form_login">
-		<fieldset align="center">
+		<fieldset>
        <p><input type="text" name="id" placeholder="아이디 입력해주세요"></p>
        <p><input type="password" name="password" placeholder="비밀번호를 알려줘"></p>
        
@@ -88,7 +88,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>AhnSSu & Chan</span></strong>
+        &copy; Copyright <strong><span>AhnSSu &amp; Chan</span></strong>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

@@ -75,20 +75,16 @@
 					<a href="list">${login.nickname}님, 안녕하세요.</a>
 				</h1>
 				<div class="social-links mt-3 text-center">
-					<a href="http://hisnet.handong.edu" target="_blank" class="heading"><i
-						class="bx bx-heading"></i></a> <a href="http://chruch.handong.edu"
-						target="_blank" class="bible"><i class="bx bx-bible"></i></a>
+					<a href="https://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>
+					<a href="https://church.handong.edu:9003/" target="_blank" class="bible"><i class="bx bx-bible"></i></a>
 				</div>
 			</div>
 
 			<nav class="nav-menu">
 				<ul>
-					<li class="active"><a href="#hero"><i class="bx bx-home"></i>
+					<li class="active"><a href="../list"><i class="bx bx-home"></i>
 							<span>Home</span></a></li>
-					<li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-					<li><a href="#resume"><i class="bx bx-file-blank"></i> <span>자유게시판</span></a></li>
-					<li><a href="#contact"><i class="bx bx-envelope"></i>
-							Contact</a></li>
+					<li><a href="../../login/logout"><i class='bx bx-log-out'></i>로그아웃하기</a></li>
 
 				</ul>
 			</nav>
@@ -104,8 +100,7 @@
 
 
 	<main id="main">
-
-		<!-- ======= Detaile View ======= -->
+		<!-- ======= Detail View ======= -->
 		<section id="services" class="services">
 			<div class="container">
 				<form:form commandName="u" action="editok" method="post">
@@ -113,21 +108,18 @@
 					<div class="section-title">
 						<h2>
 							제목 |
-							<form:label path="title" />
+							<form:label path="title">${u.title}</form:label>
 						</h2>
 
 					</div>
-
 
 					<div class="row">
 						<div class="col-lg-9 col-md-9 icon-box" data-aos="fade-up">
 							<div class="icon">
 								<i class="icofont-penguin-linux"></i>
 							</div>
-							<h3 class="title">
-								<a href="">작성자</a>
-							</h3>
-							<form:label path="writer" style="width:90%; margin-left: 15px;" />
+							<h3 class="title">작성자</h3>
+							<form:label path="writer" style="width:90%; margin-left: 15px;">${u.writer}</form:label>
 						</div>
 					</div>
 					<div class="row">
@@ -135,10 +127,8 @@
 							<div class="icon">
 								<i class="icofont-clock-time"></i>
 							</div>
-							<h3 class="title">
-								<a href="">작성 시간 </a>
-							</h3>
-							<form:label path="regdate" style="width:90%; margin-left: 15px;" />
+							<h3 class="title">작성 시간</h3>
+							<form:label path="regdate" style="width:90%; margin-left: 15px;">${u.regdate}</form:label>
 						</div>
 					</div>
 					<div class="row">
@@ -148,25 +138,29 @@
 								<i class="icofont-console"></i>
 							</div>
 							<h2 class="title">내용</h2>
-							<br>
-							<br>
-							<form:label path="content" style="width:90%; margin-left: 15px;" />
+							<br> <br>
+							<form:label path="content" style="width:90%; margin-left: 15px;">${u.content} </form:label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-9 col-md-9 icon-box" data-aos="fade-up"
 							data-aos-delay="100">
 							<div class="text-center">
-								<input type="button" value="Edit Post"
-									onclick="location.href='../editform/${u.id}'" /> <input type="button"
-									value="Cancel" onclick="history.back()" />
+								<c:if
+									test="${u.writer eq login.nickname or login.nickname eq 'admin'}">
+									<input type="button" value="수정하기"
+										onclick="location.href='../editform/${u.seq}'" />
+									<input type="button" value="삭제하기"
+										onclick="location.href='../deleteok/${u.seq}'" />
+								</c:if>
+								<input type="button" value="Cancel" onclick="history.back()" />
 							</div>
 						</div>
 					</div>
-			</div>
-			</form:form>
+				</form:form>
 
 			</div>
+
 		</section>
 	</main>
 	<!-- End #main -->
@@ -175,7 +169,7 @@
 	<footer id="footer">
 		<div class="container">
 			<div class="copyright">
-				&copy; Copyright <strong><span>AhnSSu & Chan</span></strong>
+				&copy; Copyright <strong><span>AhnSSu &amp; Chan</span></strong>
 			</div>
 			<div class="credits">
 				<!-- All the links in the footer should remain intact. -->

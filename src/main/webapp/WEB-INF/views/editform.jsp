@@ -75,24 +75,16 @@
 					<a href="list">${login.nickname}님, 안녕하세요.</a>
 				</h1>
 				<div class="social-links mt-3 text-center">
-					<a href="http://hisnet.handong.edu" target="_blank" class="heading"><i
-						class="bx bx-heading"></i></a> <a href="http://chruch.handong.edu"
-						target="_blank" class="bible"><i class="bx bx-bible"></i></a>
+					<a href="https://hisnet.handong.edu" target="_blank" class="heading"><i class="bx bx-heading"></i></a>
+					<a href="https://church.handong.edu:9003/" target="_blank" class="bible"><i class="bx bx-bible"></i></a>
 				</div>
 			</div>
-
 			<nav class="nav-menu">
 				<ul>
-					<li class="active"><a href="#hero"><i class="bx bx-home"></i>
+					<li class="active"><a href="list"><i class="bx bx-home"></i>
 							<span>Home</span></a></li>
-					<li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-					<li><a href="#resume"><i class="bx bx-file-blank"></i> <span>자유게시판</span></a></li>
-					<li><a href="#contact"><i class="bx bx-envelope"></i>
-							Contact</a></li>
-
 				</ul>
 			</nav>
-			<!-- .nav-menu -->
 			<button type="button" class="mobile-nav-toggle d-xl-none">
 				<i class="icofont-navigation-menu"></i>
 			</button>
@@ -111,9 +103,7 @@
 					<form:hidden path="seq" />
 					<div class="section-title">
 						<h2>게시글 수정</h2>
-
 					</div>
-
 
 					<div class="row">
 						<div class="col-lg-9 col-md-9 icon-box" data-aos="fade-up">
@@ -131,8 +121,7 @@
 								<i class="icofont-console"></i>
 							</div>
 							<h2 class="title">내용</h2>
-							<br>
-							<br>
+							<br> <br>
 							<form:textarea path="content" cols="90" rows="10" name="content"></form:textarea>
 						</div>
 					</div>
@@ -140,18 +129,14 @@
 						<div class="col-lg-9 col-md-9 icon-box" data-aos="fade-up"
 							data-aos-delay="100">
 							<div class="text-center">
-								<input type="button" value="Edit Post"
-									onclick="location.href='edit' " /> <input type="button"
-									value="Cancel" onclick="history.back()" />
+								<input type="submit" name="submit" value="게시물 수정" /> <input
+									type="button" value="취소" onclick="history.back()" />
 							</div>
 						</div>
 					</div>
-			</div>
-			</form:form>
-
+				</form:form>
 			</div>
 		</section>
-		<!— Edit Post View —>
 
 	</main>
 	<!-- End #main -->
@@ -160,7 +145,7 @@
 	<footer id="footer">
 		<div class="container">
 			<div class="copyright">
-				&copy; Copyright <strong><span>AhnSSu & Chan</span></strong>
+				&copy; Copyright <strong><span>AhnSSu &amp; Chan</span></strong>
 			</div>
 			<div class="credits">
 				<!-- All the links in the footer should remain intact. -->
