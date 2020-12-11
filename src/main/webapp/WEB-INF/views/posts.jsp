@@ -80,7 +80,7 @@
 			</div>
 			<nav class="nav-menu">
 				<ul>
-					<li class="active"><a href="../list"><i class="bx bx-home"></i>
+					<li class="active"><a href="../board/list"><i class="bx bx-home"></i>
 							<span>Home</span></a></li>
 					<li><a href="../login/logout"><i class='bx bx-log-out'></i>로그아웃하기</a></li>
 
