@@ -15,9 +15,9 @@
 <meta content="" name="keywords">
 
 <!-- Favicons -->
-<link href="<c:url value="/resources/assets/img/favicon.png"/>"
+<link href="<c:url value="/resources/assets/img/favicon-32x32.png"/>"
 	rel="icon">
-<link href="<c:url value="/resources/assets/img/apple-touch-icon.png"/>"
+<link href="<c:url value="/resources/assets/img/apple-icon-114x114.png"/>"
 	rel="apple-touch-icon">
 
 <!-- Google Fonts -->
@@ -125,7 +125,7 @@
 
 				<div class="row">
 					<div class="col-lg-4" data-aos="fade-right">
-						<img src="<c:url value="/resources/assets/img/profile-img.jpg"/>"
+						<img src="<c:url value="/resources/assets/img/profile-img_cut.jpg"/>"
 							class="img-fluid" alt="">
 					</div>
 					<div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
@@ -135,26 +135,20 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<ul>
-									<li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong>
-										1 May 1995</li>
 									<li><i class="icofont-rounded-right"></i> <strong>Website:</strong>
-										www.example.com</li>
-									<li><i class="icofont-rounded-right"></i> <strong>Phone:</strong>
-										+123 456 7890</li>
+										http://sometime-hgu.herokuapp.com</li>
 									<li><i class="icofont-rounded-right"></i> <strong>City:</strong>
-										City : New York, USA</li>
+										City : 포항시 북구 한동로558 한동대학교, 대한민국 경상북도</li>
 								</ul>
 							</div>
 							<div class="col-lg-6">
 								<ul>
 									<li><i class="icofont-rounded-right"></i> <strong>Age:</strong>
-										30</li>
+										23, 24</li>
 									<li><i class="icofont-rounded-right"></i> <strong>Degree:</strong>
-										Master</li>
+										둘 다 재학생</li>
 									<li><i class="icofont-rounded-right"></i> <strong>PhEmailone:</strong>
-										email@example.com</li>
-									<li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong>
-										Available</li>
+										21600402@handong.edu, 21700589@handong.edu</li>
 								</ul>
 							</div>
 						</div>
@@ -221,7 +215,7 @@
 
 				<div class="row" data-aos="fade-in">
 
-					<div class="col-lg-5 d-flex align-items-stretch">
+					<div class="col-lg-9 d-flex align-items-stretch">
 						<div class="info">
 							<div class="address">
 								<i class="icofont-google-map"></i>
@@ -242,54 +236,11 @@
 							</div>
 
 							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12894.424330479565!2d129.37969243655317!3d36.10308938156763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35671cb0aeeab729%3A0x60ae6f217961dc9!2z7ZWc64-Z64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1607831566697!5m2!1sko!2skr"
 								style="border: 0; width: 100%; height: 290px;"></iframe>
 						</div>
 
 					</div>
-
-					<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-						<form action="forms/contact.php" method="post" role="form"
-							class="php-email-form">
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<label for="name">성함</label> <input type="text" name="name"
-										class="form-control" id="name" data-rule="minlen:4"
-										data-msg="Please enter at least 4 chars" />
-									<div class="validate"></div>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="name">이메일</label> <input type="email"
-										class="form-control" name="email" id="email" data-rule="email"
-										data-msg="Please enter a valid email" />
-									<div class="validate"></div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="name">제목</label> <input type="text"
-									class="form-control" name="subject" id="subject"
-									data-rule="minlen:4"
-									data-msg="Please enter at least 8 chars of subject" />
-								<div class="validate"></div>
-							</div>
-							<div class="form-group">
-								<label for="name">내용</label>
-								<textarea class="form-control" name="message" rows="10"
-									data-rule="required" data-msg="Please write something for us"></textarea>
-								<div class="validate"></div>
-							</div>
-							<div class="mb-3">
-								<div class="loading">Loading</div>
-								<div class="error-message"></div>
-								<div class="sent-message">Your message has been sent.
-									Thank you!</div>
-							</div>
-							<div class="text-center">
-								<button type="submit">Send Message</button>
-							</div>
-						</form>
-					</div>
-
 				</div>
 
 			</div>
